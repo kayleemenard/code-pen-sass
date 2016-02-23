@@ -71,10 +71,6 @@ a {
   -ms-user-select: none;
 }
 
-a:hover {
-  background: red;
-}
-
 a:active {
   background: yellow;
 }
@@ -87,14 +83,15 @@ a:active {
   -ms-transform-origin: 32px 24px;
 }
 
-.imgicon:div {
+.imgicon div {
   background: rgba(0, 0, 0, 0.87);
   height: 2px;
   position: relative;
   width: 20px;
 }
 
-.imgicon:div:before, .imgicon:div:after {
+.imgicon div:before,
+.imgicon div:after {
   display: block;
   content: "";
   width: 20px;
@@ -103,10 +100,10 @@ a:active {
   position: absolute;
 }
 
-.imgicon:div:before {
+.imgicon div:before {
   top: -7px;
 }
 
-.imgicon:div:after {
+.imgicon div:after {
   top: 7px;
 }
