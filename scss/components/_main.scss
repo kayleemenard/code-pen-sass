@@ -1,0 +1,103 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+	box-sizing: border-box;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	background: $white;
+	margin: 0;
+	padding: 50px;
+}
+
+.img-a {
+	background: $white;
+	color: rgba(0, 0, 0, 0.87);
+	width: 300px;
+	clip-path: circle(24ox at 30px 24px);
+	-webkit-clip-path: circle(24ox at 30px 24px);
+	transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+	-webkit-transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+	&:hover {
+		clip-path: circle(390px at 150px 24px);
+		-webkit-clip-path: circle(390px at 150px 24px);
+		transition-duration: 0.75s;
+		-webkit-transition-duration: 0.75s;
+		transition-timing-function: ease-out;
+		-webkit-transition-timing-function: ease-out;
+	}
+}	
+
+a {
+	color: inherit;
+	cursor: pointer;
+	display: block;
+	padding: 0 20px;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	&:hover {
+		background: red;
+	}
+	&:active {
+		background: yellow;
+	}
+}
+
+.imgicon {
+	cursor: pointer;
+	padding: 23px 20px;
+	transform-origin: 32px 24px;
+	-webkit-transform-origin: 32px 24px;
+	-ms-transform-origin: 32px 24px;
+	&:div {
+		background: rgba(0, 0, 0, 0.87);
+		height: 2px;
+		position: relative;
+		width: 20px;
+	}	
+	&:div:before,
+	&:div:after {
+		display: block;
+		content: "";
+		width: 20px;
+		height: 2px;
+		background: rgba(0, 0, 0, 0.87);
+		position: absolute;
+	}
+	&:div:before {
+		top: -7px;
+	}
+	&:div:after {
+		top: 7px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
