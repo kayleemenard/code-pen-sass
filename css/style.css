@@ -1,97 +1,62 @@
-@-moz-viewport {
-  width: device-width;
-  scale: 1;
-}
-
-@-ms-viewport {
-  width: device-width;
-  scale: 1;
-}
-
-@-o-viewport {
-  width: device-width;
-  scale: 1;
-}
-
-@-webkit-viewport {
-  width: device-width;
-  scale: 1;
-}
-
-@viewport {
-  width: device-width;
-  scale: 1;
-}
-
-html {
-  box-sizing: border-box;
-  -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 body {
-  background: #F5F5F5;
-  margin: 0;
+  font: 100% Roboto, sans-serif;
+  background-color: blue;
   padding: 50px;
+  margin: 0;
 }
 
-.img-a {
-  background: #F5F5F5;
-  color: rgba(0, 0, 0, 0.87);
+nav {
   width: 300px;
-  clip-path: circle(24ox at 30px 24px);
-  -webkit-clip-path: circle(24ox at 30px 24px);
+  background: white;
+  color: rgba(0, 0, 0, 0.87);
+  -webkit-clip-path: circle(24px at 32px 24px);
+          clip-path: circle(24px at 32px 24px);
   transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
-  -webkit-transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
 }
 
-.img-a:hover {
-  clip-path: circle(390px at 150px 24px);
-  -webkit-clip-path: circle(390px at 150px 24px);
-  transition-duration: 0.75s;
-  -webkit-transition-duration: 0.75s;
+nav nav:hover {
   transition-timing-function: ease-out;
-  -webkit-transition-timing-function: ease-out;
+  transition-duration: 0.75s;
+  -webkit-clip-path: circle(390px at 150px 24px);
+          clip-path: circle(390px at 150px 24px);
 }
 
 a {
+  display: block;
+  line-height: 50px;
+  padding: 0 20px;
   color: inherit;
   cursor: pointer;
-  display: block;
-  padding: 0 20px;
-  user-select: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+a:hover {
+  background: #ffe082;
 }
 
 a:active {
-  background: yellow;
+  background: #ffca28;
 }
 
-.imgicon {
-  cursor: pointer;
+.navicon {
   padding: 23px 20px;
-  transform-origin: 32px 24px;
+  cursor: pointer;
   -webkit-transform-origin: 32px 24px;
-  -ms-transform-origin: 32px 24px;
+      -ms-transform-origin: 32px 24px;
+          transform-origin: 32px 24px;
 }
 
-.imgicon div {
-  background: rgba(0, 0, 0, 0.87);
-  height: 2px;
+.navicon div {
   position: relative;
   width: 20px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.87);
 }
 
-.imgicon div:before,
-.imgicon div:after {
+.navicon div:before, .navicon div:after {
   display: block;
   content: "";
   width: 20px;
@@ -100,10 +65,10 @@ a:active {
   position: absolute;
 }
 
-.imgicon div:before {
+.navicon div:before {
   top: -7px;
 }
 
-.imgicon div:after {
+.navicon div:after {
   top: 7px;
 }
